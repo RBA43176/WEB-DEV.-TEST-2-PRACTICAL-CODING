@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taco Bell Grilled Cheese Burrito</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <h1>Taco Bell Grilled Cheese Burrito</h1>
+    <p>The Taco Bell Grilled Cheese Burrito is a warm flour tortilla filled with seasoned beef, seasoned rice, nacho cheese sauce, creamy chipotle sauce, reduced-fat sour cream,
+        red fiesta strips, and a three-cheese blend, topped with an extra layer of melted cheese grilled directly onto the outside of the tortill
+    </p>
+
+    <button id="details-btn">Reveal Details</button>
+
+    <div class="product-card">
+        <img src="https://dam.tacobell.com/transform/f17045a8-6733-450a-9dd0-4560a7415794/Newsroom-taco-bell-grilled-cheese-burrito-jpeg" alt="Taco Bell Grilled Burrito" width="450" height="300">
+        <p>Category</p>
+        <h3 class="productcard-title">Taco Bell Grilled Burrito</h3>
+    </div>
+
+
+     <div id="details" hidden>
+        <ul>
+            <li>Grilled Cheese Burrito</li>
+            <li>From Taco Bell</li>
+            <li>It's Delicious</li>
+        </ul>
+    </div>
+
+    <br><br>
+
+     <button id="theme-btn">Change Theme</button>
+
+    <div class="productcard-rating">
+        <p>It's delicious!!! Obviously I give it a ★★★★★ rating!</p>
+    </div>
+
+    <div class="productcard-price-row">
+        <span class="productcard-price-current">New Price - $8</span>
+        <span class="productcard-price-old">Old Price - $6</span>
+    </div>
+
+    <br>
+
+    <script>
+    const detailsBtn = document.getElementById('details-btn');
+        const details = document.getElementById('details');
+        const themeBtn = document.getElementById('theme-btn');
+
+          // Simple Toggle Details
+        detailsBtn.addEventListener('click', () => {
+            details.hidden = !details.hidden; 
+        });
+
+        // Simple Toggle Theme (switches between black and white)
+        themeBtn.addEventListener('click', () => {
+            if (document.body.style.backgroundColor === 'black') {
+                document.body.style.backgroundColor = 'white';
+                document.body.style.color = 'black';
+            } else {
+                document.body.style.backgroundColor = 'black';
+                document.body.style.color = 'white';
+            }
+        }); 
+    </script>
+
+</body>
+</html>
